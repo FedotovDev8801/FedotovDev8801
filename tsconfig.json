@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["dom", "es2015"],
+    "allowJs": true,
+    "checkJs": false,
+    "outDir": "scripts/",
+    "rootDir": "scripts/",
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": [
+    "scripts/**/*.ts"
+  ]
+}
