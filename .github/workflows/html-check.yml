@@ -1,0 +1,31 @@
+name: HTML Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install htmlhint
+      run: |
+        npm install -g htmlhint  # Установка htmlhint глобально
+
+    - name: Checking HTML files
+      run: |
+        echo "Checking HTML for errors..."
+        htmlhint **/*.html  # Проверка всех HTML файлов в проекте
