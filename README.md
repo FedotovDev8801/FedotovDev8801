@@ -1,9 +1,9 @@
 # 👋 Hi! I'm [FedotovDev]
 
 ## 🚀 About me:
-- 🌱 Изучаю: Python, C#, Game Development
-- 💼 Занимаюсь: созданием игр и утилит
-- 🎮 Хобби: программирование, игры
+- 🌱 Learning: Python, C#, Game Development
+- 💼 Job: game and app creating
+- 🎮 Hobby: programming, gaming
 
 ## 📈 Stats:
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=FedotovDev8801&show_icons=true&theme=radical)
