@@ -7,6 +7,7 @@
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=FedotovDev8801&show_icons=true&theme=radical)
 ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=FedotovDev8801&layout=compact&theme=radical)
+![Trophies](https://github-profile-trophy.vercel.app/?username=FedotovDev8801&theme=radical)
 
 
 <!---
