@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin: 20px;
+        }
+        #click-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        #click-btn:active {
+            background-color: #0056b3;
+        }
+        .upgrade {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .upgrade:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        #stats {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clicker Game</h1>
+    <button id="click-btn">Click!</button>
+    <div id="stats">
+        <p>Points: <span id="score">0</span></p>
+        <p>Points per click: <span id="per-click">1</span></p>
+    </div>
+    <div id="upgrades">
+        <button class="upgrade" id="upgrade1" data-cost="10">Increase clicks (10 points)</button>
+        <button class="upgrade" id="upgrade2" data-cost="50">Boost clicks (50 points)</button>
+    </div>
+    <script>
+        // Initial score and points per click
+        let score = 0;
+        let perClick = 1;
+
+        // DOM elements for updates
+        const scoreDisplay = document.getElementById('score');
+        const perClickDisplay = document.getElementById('per-click');
+        const clickButton = document.getElementById('click-btn');
+        const upgradeButtons = document.querySelectorAll('.upgrade');
+
+        // Update UI elements for score and button states
+        function updateUI() {
+            scoreDisplay.textContent = score;
+            perClickDisplay.textContent = perClick;
+
+            // Enable or disable upgrade buttons based on score
+            upgradeButtons.forEach(button => {
+                const cost = parseInt(button.getAttribute('data-cost'));
+                button.disabled = score < cost;
+            });
+        }
+
+        // Increment score when clicking the main button
+        clickButton.addEventListener('click', () => {
+            score += perClick;
+            updateUI();
+        });
+
+        // Handle purchasing upgrades
+        upgradeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const cost = parseInt(button.getAttribute('data-cost'));
+                if (score >= cost) {
+                    score -= cost;
+                    perClick += 1;
+                    // Increase cost of upgrade after purchase
+                    button.setAttribute('data-cost', Math.ceil(cost * 1.5));
+                    button.textContent = `Increase clicks (${button.getAttribute('data-cost')} points)`;
+                    updateUI();
+                }
+            });
+        });
+
+        // Initialize UI
+        updateUI();
+    </script>
+</body>
+</html>
