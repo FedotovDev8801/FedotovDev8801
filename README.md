@@ -1,4 +1,4 @@
-# 👋 Hi! I'm [FedotovDev]
+# 👋 Hi! I'm **FedotovDev**
 
 ## 🚀 About me:
 - 🌱 Learning: Python, C#, Game Development
