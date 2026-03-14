@@ -13,8 +13,6 @@
 ![Trophies](https://github-profile-trophy.vercel.app/?username=FedotovDev8801&theme=radical)
 
 
-[![Telegram](https://img.shields.io/badge/-Telegram-blue?style=flat-square&logo=Telegram&logoColor=white)](https://t.me/fdevarea404)
-[![Twitter Follow](https://img.shields.io/twitter/follow/FedotovDev8801?style=social)](https://x.com/FedotovDev8801)
 [![Patreon](https://img.shields.io/badge/Support-Patreon-orange?style=flat-square&logo=patreon)](https://www.patreon.com/FedotovDev8801)
 
 <!---
